@@ -47,8 +47,18 @@
               <td><%= company.metadata.phone %></td>
               <td><%= company.metadata.email %></td>
               <td>
+                <% if(dotty.exists(company, "metadata.social.twitter")){ %>
                 <a href="<%= company.metadata.social.twitter %>"><i class="fa fa-twitter-square"></i></a>
+                <% } %>
+                <% if(dotty.exists(company, "metadata.social.facebook")){ %>
                 <a href="<%= company.metadata.social.facebook %>"><i class="fa fa-facebook-square"></i></a>
+                <% } %>
+                <% if(dotty.exists(company, "metadata.social.instagram")){ %>
+                <a href="<%= company.metadata.social.instagram %>"><i class="fa fa-instagram"></i></a>
+                <% } %>
+                <% if(dotty.exists(company, "metadata.social.pinterest")){ %>
+                <a href="<%= company.metadata.social.pinterest %>"><i class="fa fa-pinterest-square"></i></a>
+                <% } %>
               </td>
             </tr>
             <% }); %>

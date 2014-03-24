@@ -7,4 +7,6 @@ email: support@holstee.com
 social:
   twitter: https://twitter.com/holstee
   facebook: https://www.facebook.com/holstee
+  pinterest: http://www.pinterest.com/holstee/
+  instagram: http://instagram.com/holstee
 ---
