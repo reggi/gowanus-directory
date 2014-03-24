@@ -8,11 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="/assets/style.css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script>
-    <script type="text/javascript" src="./script.js"></script>
+    <script type="text/javascript" src="/assets/script.js"></script>
 </head>
 <body>
 
@@ -40,16 +40,18 @@
             </tr>
           </thead>
           <tbody>
+            <% _.each(contents.companies, function(company){ %>
             <tr>
-              <td>106</td>
-              <td><a href="http://holstee.com">Holstee</a></td>
-              <td>1-917-336-0603</td>
-              <td>support@holstee.com</td>
+              <td><%= company.metadata.suite %></td>
+              <td><a href="<%= company.metadata.company_website %>"><%= company.metadata.company_name %></a></td>
+              <td><%= company.metadata.phone %></td>
+              <td><%= company.metadata.email %></td>
               <td>
-                <a href="http://twitter.com/holstee"><i class="fa fa-twitter-square"></i></a>
-                <a href="http://facebook.com/holstee"><i class="fa fa-facebook-square"></i></a>
+                <a href="<%= company.metadata.social.twitter %>"><i class="fa fa-twitter-square"></i></a>
+                <a href="<%= company.metadata.social.facebook %>"><i class="fa fa-facebook-square"></i></a>
               </td>
             </tr>
+            <% }); %>
             <tr>
               <td colspan="5" style="text-align:center">
                 <a href="https://docs.google.com/forms/d/1DVVEWW8tOsAA678ZgjrxD1zaaVAJGUvugOXtAdKY4So/viewform">Add +</a>
@@ -68,7 +70,7 @@
           <div class="col-xs-12" id="community">
             <h5>Community</h5>
             <a href="http://www.holstee.com/pages/workshop">
-              <img src="./holstee.gif">
+              <img src="/assets/holstee.gif">
             </a>
           </div>  
         </div>

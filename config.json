@@ -1,0 +1,26 @@
+{
+  "locals": {
+    "url": "http://gowanus.co",
+    "name": "98 4th Street, Brooklyn, New York, 11231",
+    "owner": "Thomas Reggi",
+    "description": "Here's a directory of all of the residences of 98 4th street."
+  },
+  "plugins": [
+    "wintersmith-ejs"
+  ],
+  "require": {
+    "moment": "moment",
+    "_": "underscore",
+    "typogr": "typogr"
+  },
+  "jade": {
+    "pretty": true
+  },
+  "markdown": {
+    "smartLists": true,
+    "smartypants": true
+  },
+  "paginator": {
+    "perPage": 3
+  }
+}
